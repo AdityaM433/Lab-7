@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lab 7 – Mad Lib</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Mad Lib Mayhem</h1>
+  <p class="subtitle">Fill in the blanks — hilarity guaranteed.</p>
+
+  <form action="/ITC505/lab-7/" method="POST">
+
+    <div class="field">
+      <label for="name">A person's name <span>proper noun</span></label>
+      <input type="text" id="name" name="name" placeholder="e.g. Bartholomew" required />
+    </div>
+
+    <div class="field">
+      <label for="animal">An animal <span>noun</span></label>
+      <input type="text" id="animal" name="animal" placeholder="e.g. platypus" required />
+    </div>
+
+    <div class="field">
+      <label for="verb">An action <span>verb (-ing)</span></label>
+      <input type="text" id="verb" name="verb" placeholder="e.g. juggling" required />
+    </div>
+
+    <div class="field">
+      <label for="adjective">A describing word <span>adjective</span></label>
+      <input type="text" id="adjective" name="adjective" placeholder="e.g. wobbly" required />
+    </div>
+
+    <div class="field">
+      <label for="place">A place <span>noun</span></label>
+      <input type="text" id="place" name="place" placeholder="e.g. the moon" required />
+    </div>
+
+    <div class="field">
+      <label for="number">A number <span>number</span></label>
+      <input type="text" id="number" name="number" placeholder="e.g. 42" required />
+    </div>
+
+    <button type="submit">Generate My Mad Lib! →</button>
+
+  </form>
+
+  <section class="addendum">
+    <h2>Addendum</h2>
+    <p><strong>Process:</strong> I planned a six-slot story about a wild adventure, choosing word types (proper noun, noun, verb, adjective, place, number) that create humorous combinations.</p>
+    <p><strong>Form design:</strong> The form uses <code>method="POST"</code> so inputs aren't exposed in the URL. Each input is paired with a label using matching <code>for</code>/<code>id</code> attributes for accessibility.</p>
+    <p><strong>Server-side:</strong> The POST handler destructures <code>req.body</code>, validates all fields, then uses template literals to build the story and send it back as HTML.</p>
+    <p><strong>Styling:</strong> Bold neo-brutalist aesthetic with a warm orange palette and thick drop-shadows to match the fun nature of a mad lib.</p>
+  </section>
+
+  <footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+  <script type="text/javascript">
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+  </script>
+
+</body>
+</html>

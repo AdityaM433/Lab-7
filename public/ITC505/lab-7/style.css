@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Nunito:wght@400;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #fff7ed;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 4rem;
+}
+
+h1 {
+  font-family: 'Boogaloo', cursive;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  color: #c2410c;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+h2 {
+  font-family: 'Boogaloo', cursive;
+  font-size: 1.4rem;
+  color: #c2410c;
+  margin-bottom: 0.7rem;
+}
+
+.subtitle {
+  color: #78716c;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+form {
+  background: #ffffff;
+  border: 3px solid #1c1917;
+  border-radius: 1.2rem;
+  box-shadow: 6px 6px 0 #1c1917;
+  padding: 2rem 2.2rem;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #1c1917;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+label span {
+  display: inline-block;
+  background: #fde68a;
+  color: #92400e;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-left: 6px;
+  vertical-align: middle;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+input[type="text"] {
+  padding: 0.6rem 0.9rem;
+  border: 2px solid #a8a29e;
+  border-radius: 0.5rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  background: #fafaf9;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input[type="text"]:focus {
+  border-color: #ea580c;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.18);
+  background: #ffffff;
+}
+
+button[type="submit"] {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: #ea580c;
+  color: #ffffff;
+  font-family: 'Boogaloo', cursive;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  border: 3px solid #1c1917;
+  border-radius: 0.7rem;
+  box-shadow: 4px 4px 0 #1c1917;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+button[type="submit"]:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #1c1917;
+}
+
+button[type="submit"]:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #1c1917;
+}
+
+.addendum {
+  margin-top: 2.5rem;
+  background: #ffffff;
+  border: 2px solid #d6d3d1;
+  border-radius: 1rem;
+  padding: 1.4rem 1.8rem;
+  max-width: 520px;
+  width: 100%;
+}
+
+.addendum p {
+  color: #57534e;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+}
+
+.addendum p:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  margin-top: 2.5rem;
+  color: #a8a29e;
+  font-size: 0.82rem;
+  text-align: center;
+}
