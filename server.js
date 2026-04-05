@@ -120,4 +120,5 @@ server.post('/ITC505/lab-7/', (req, res) => {
 })
 
 // Start server
-server.listen(8080, () => console.log('Running at http://localhost:8080'))
+const port = process.env.PORT || 8080
+server.listen(port, () => console.log(`Running on port ${port}`))
